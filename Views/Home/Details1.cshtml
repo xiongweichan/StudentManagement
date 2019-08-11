@@ -1,0 +1,25 @@
+﻿@using StudentManagement.Models
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@*@ViewData["PageTitle"]*@@ViewBag.PageTitle</h3>
+    @{
+        //var student = ViewData["Student"] as Student;
+        var student = ViewBag.Student;
+    }
+    <div>
+        姓名：@student.Name
+    </div>
+    <div>
+        邮箱：@student.Email
+    </div>
+    <div>
+        班级名称：@student.ClassName
+    </div>
+</body>
+</html>
+
