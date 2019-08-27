@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
+using StudentManagement.ViewModels;
 
 namespace StudentManagement.Controllers
 {
@@ -16,9 +17,9 @@ namespace StudentManagement.Controllers
             _studentRepository = studentRepository;
         }
         //操作方法
-        public string Index()
+        public IActionResult Index()
         {
-            return _studentRepository.GetStudent(1).Name;
+            return View(_studentRepository.GetAllStudents());
             //return Json(new { id = "1", name = "张三" });
         }
         //public JsonResult Details()
@@ -33,14 +34,20 @@ namespace StudentManagement.Controllers
         //}
         public IActionResult Details()
         {
-            var model = _studentRepository.GetStudent(1);
+            //var model = _studentRepository.GetStudent(1);
 
             //ViewBag.PageTitle = "学生详情";
             //ViewBag.Student = model;
             //ViewData["PageTitle"] = "Student Details";
             //ViewData["Student"] = model;
+            //return View(model);
 
-            return View(model);
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Student = _studentRepository.GetStudent(1),
+                PageTitle = "学生详细信息"
+            };
+            return View(homeDetailsViewModel);
         }
     }
 }

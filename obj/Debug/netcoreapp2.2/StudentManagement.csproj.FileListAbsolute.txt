@@ -22,3 +22,5 @@ G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.Vie
 G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.csproj.CopyComplete
 G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Test.g.cshtml.cs
 G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\Razor\MyViews\Test.g.cshtml.cs
+G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\StudentManagement.csprojAssemblyReference.cache
+G:\chenxw\github\StudentManagement\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
